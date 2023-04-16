@@ -6,6 +6,21 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<script > 
+		function onLoadCallback()
+		{
+			grecaptcha.render('divRecaptcha', {
+				'sitekey' :'6LdMq5AlAAAAAGxVWc23IY8DIu9QM7LqVyy04EBQ' ,
+				'callback' : verifyCallback,
+				'callback' : sucessfullcallback
+
+
+			
+		});
+	} 
+		</script>
+		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -210,6 +225,8 @@ While yoga is not a religion, it does have spiritual roots. The practice of yoga
 
 				<!-- Footer -->
 					<footer id="footer">
+						<div class="g-recaptcha" id="divRecaptcha" ></div>
+
 						<section>
 							<form method="post" action="#">
 								<div class="fields">
